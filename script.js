@@ -104,8 +104,9 @@
 
   function resetNoButton() {
     if (!btnNo) return;
-    btnNo.style.left = "15%";
-    btnNo.style.top = "120px";
+    const desktop = window.matchMedia("(min-width: 768px)").matches;
+    btnNo.style.left = desktop ? "8%" : "12%";
+    btnNo.style.top = desktop ? "70px" : "108px";
     btnNo.style.transform = "rotate(0deg)";
   }
 

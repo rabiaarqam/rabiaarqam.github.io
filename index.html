@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="For Rabia, with love from Arqam" />
+  <meta name="theme-color" content="#1a0f14" />
   <title>Rabia & Arqam · Forever</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -28,7 +31,7 @@
     <div class="hero__inner">
       <p class="hero__eyebrow">A little corner of the internet, just for you</p>
       <h1 class="hero__title"><span class="name-rabia">Rabia</span> <span class="ampersand">&</span> <span class="name-arqam">Arqam</span></h1>
-      <p class="hero__subtitle">Every love story is beautiful, but ours is my favourite.</p>
+      <p class="hero__subtitle">With you, the world feels softer and braver at the same time.</p>
       <div class="nicknames" role="list">
         <span class="nicknames__label">You are my</span>
         <span class="chip" role="listitem">Meu Amor</span>
@@ -38,26 +41,32 @@
         <span class="chip" role="listitem">…and everything</span>
       </div>
       <p class="hero__teaser">Muzz, three calls, WhatsApp, then us in real life. The rest is below, in small chapters, not a wall of photos.</p>
-      <a class="scroll-hint" href="#marry-me">Continue <span class="scroll-hint__arrow">↓</span></a>
+      <a class="scroll-hint" href="#marry-me">The question <span class="scroll-hint__arrow">↓</span></a>
     </div>
   </header>
 
-  <main>
-    <section class="proposal-showcase" id="marry-me" aria-labelledby="proposal-heading">
+  <aside class="proposal-showcase" id="marry-me" aria-labelledby="proposal-heading">
+    <div class="proposal-showcase__card">
       <div class="proposal-showcase__frame" aria-hidden="true"></div>
       <div class="proposal-showcase__inner">
-        <p class="proposal-showcase__pre">Rabia, this is for you</p>
-        <h2 class="proposal-showcase__title" id="proposal-heading">Will you marry me?</h2>
-        <p class="proposal-showcase__lead">I built this little site because words in a chat were not enough. Say yes when you are ready.</p>
+        <p class="proposal-showcase__pre">For you, Rabia</p>
+        <h2 class="proposal-showcase__title" id="proposal-heading">
+          <span class="proposal-showcase__title-soft">Will you</span>
+          <span class="proposal-showcase__title-em">marry me?</span>
+        </h2>
+        <p class="proposal-showcase__lead proposal-showcase__lead--desktop">Tap when you are ready.</p>
+        <p class="proposal-showcase__lead proposal-showcase__lead--mobile">A question this big deserves its own moment. When you are ready, say yes.</p>
         <div class="proposal-showcase__ring" aria-hidden="true">💍</div>
         <div class="proposal-buttons" id="proposalButtons">
-          <button type="button" class="btn btn--yes" id="btnYes">Yes! 💍</button>
+          <button type="button" class="btn btn--yes" id="btnYes">Yes 💍</button>
           <button type="button" class="btn btn--no" id="btnNo">No</button>
         </div>
         <p class="proposal-showcase__hint" id="noHint" hidden aria-live="polite"></p>
       </div>
-    </section>
+    </div>
+  </aside>
 
+  <main>
     <section class="section timeline-section section--alt" id="timeline">
       <div class="section__inner section__inner--carousel">
         <h2 class="section__title">How we happened</h2>
@@ -135,6 +144,7 @@
 
         <div class="memory-tabs" role="tablist" aria-label="Memory albums">
           <button type="button" class="memory-tab is-active" role="tab" aria-selected="true" aria-controls="memory-muzz" id="tab-muzz">Muzz</button>
+          <button type="button" class="memory-tab" role="tab" aria-selected="false" aria-controls="memory-whatsapp" id="tab-whatsapp">WhatsApp</button>
           <button type="button" class="memory-tab" role="tab" aria-selected="false" aria-controls="memory-meetup" id="tab-meetup">First meetup</button>
           <button type="button" class="memory-tab" role="tab" aria-selected="false" aria-controls="memory-birthday" id="tab-birthday">Birthday</button>
           <button type="button" class="memory-tab" role="tab" aria-selected="false" aria-controls="memory-moments" id="tab-moments">Moments</button>
@@ -168,6 +178,23 @@
                   <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (11).jpeg" alt="Muzz memory" loading="lazy" /></li>
                   <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (12).jpeg" alt="Muzz memory" loading="lazy" /></li>
                   <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.52 AM.jpeg" alt="Muzz memory" loading="lazy" /></li>
+                </ul>
+              </div>
+              <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous photo">‹</button>
+              <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next photo">›</button>
+              <div class="carousel__dots" role="tablist" aria-label="Photos"></div>
+            </div>
+          </div>
+
+          <div class="memory-panel" id="memory-whatsapp" role="tabpanel" aria-labelledby="tab-whatsapp" hidden>
+            <p class="memory-panel__hint">When we moved to WhatsApp and the chat never really stopped.</p>
+            <div class="carousel carousel--photos" data-carousel data-carousel-loop>
+              <div class="carousel__viewport">
+                <ul class="carousel__track">
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Whatsapp/WhatsApp Image 2026-03-29 at 11.03.54 AM.jpeg" alt="WhatsApp memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Whatsapp/WhatsApp Image 2026-03-29 at 11.03.54 AM (1).jpeg" alt="WhatsApp memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Whatsapp/WhatsApp Image 2026-03-29 at 11.03.54 AM (2).jpeg" alt="WhatsApp memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Whatsapp/WhatsApp Image 2026-03-29 at 11.03.54 AM (3).jpeg" alt="WhatsApp memory" loading="lazy" /></li>
                 </ul>
               </div>
               <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous photo">‹</button>
