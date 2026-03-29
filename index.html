@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="For Rabia — with love from Arqam" />
+  <meta name="description" content="For Rabia, with love from Arqam" />
   <title>Rabia & Arqam · Forever</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,13 +11,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="hearts-bg" aria-hidden="true"></div>
+  <div class="bg-stack" aria-hidden="true">
+    <div class="bg-stack__base"></div>
+    <div class="bg-stack__aurora bg-stack__aurora--1"></div>
+    <div class="bg-stack__aurora bg-stack__aurora--2"></div>
+    <div class="bg-stack__aurora bg-stack__aurora--3"></div>
+    <div class="bg-stack__aurora bg-stack__aurora--4"></div>
+    <div class="bg-stack__stars"></div>
+    <div class="bg-stack__hearts"></div>
+    <div class="bg-stack__shimmer"></div>
+    <div class="bg-stack__grain"></div>
+    <div class="bg-stack__vignette"></div>
+  </div>
 
   <header class="hero" id="top">
     <div class="hero__inner">
       <p class="hero__eyebrow">A little corner of the internet, just for you</p>
       <h1 class="hero__title"><span class="name-rabia">Rabia</span> <span class="ampersand">&</span> <span class="name-arqam">Arqam</span></h1>
-      <p class="hero__subtitle">Every love story is beautiful — but ours is my favourite.</p>
+      <p class="hero__subtitle">Every love story is beautiful, but ours is my favourite.</p>
       <div class="nicknames" role="list">
         <span class="nicknames__label">You are my</span>
         <span class="chip" role="listitem">Meu Amor</span>
@@ -26,89 +37,246 @@
         <span class="chip" role="listitem">Dost</span>
         <span class="chip" role="listitem">…and everything</span>
       </div>
-      <a class="scroll-hint" href="#story">Scroll <span class="scroll-hint__arrow">↓</span></a>
+      <p class="hero__teaser">Muzz, three calls, WhatsApp, then us in real life. The rest is below, in small chapters, not a wall of photos.</p>
+      <a class="scroll-hint" href="#marry-me">Continue <span class="scroll-hint__arrow">↓</span></a>
     </div>
   </header>
 
   <main>
-    <section class="section story" id="story">
-      <div class="section__inner">
-        <h2 class="section__title">Our story</h2>
-        <p class="section__lead">
-          Rabia — these pages hold moments that made me smile, remember, and fall in love all over again.
-          From the first time we met to birthdays and ordinary days that felt extraordinary because you were there.
-        </p>
+    <section class="proposal-showcase" id="marry-me" aria-labelledby="proposal-heading">
+      <div class="proposal-showcase__frame" aria-hidden="true"></div>
+      <div class="proposal-showcase__inner">
+        <p class="proposal-showcase__pre">Rabia, this is for you</p>
+        <h2 class="proposal-showcase__title" id="proposal-heading">Will you marry me?</h2>
+        <p class="proposal-showcase__lead">I built this little site because words in a chat were not enough. Say yes when you are ready.</p>
+        <div class="proposal-showcase__ring" aria-hidden="true">💍</div>
+        <div class="proposal-buttons" id="proposalButtons">
+          <button type="button" class="btn btn--yes" id="btnYes">Yes! 💍</button>
+          <button type="button" class="btn btn--no" id="btnNo">No</button>
+        </div>
+        <p class="proposal-showcase__hint" id="noHint" hidden aria-live="polite"></p>
       </div>
     </section>
 
-    <section class="section gallery-block" id="first-meetup">
-      <div class="section__inner">
-        <h2 class="section__title">First meetup</h2>
-        <p class="section__caption">Where it began — and I already knew something had changed.</p>
-        <div class="gallery">
-          <figure class="gallery__item"><img src="Assets/First Meetup/WhatsApp Image 2026-03-29 at 9.59.30 AM (2).jpeg" alt="Memory from our first meetup" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/First Meetup/WhatsApp Image 2026-03-29 at 9.59.30 AM (3).jpeg" alt="Memory from our first meetup" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/First Meetup/WhatsApp Image 2026-03-29 at 9.59.30 AM (4).jpeg" alt="Memory from our first meetup" loading="lazy" /></figure>
+    <section class="section timeline-section section--alt" id="timeline">
+      <div class="section__inner section__inner--carousel">
+        <h2 class="section__title">How we happened</h2>
+        <p class="section__caption timeline-section__hook">Swipe or use the arrows. One chapter at a time.</p>
+
+        <div class="carousel carousel--timeline" data-carousel data-carousel-loop>
+          <div class="carousel__viewport">
+            <ul class="carousel__track">
+              <li class="carousel__slide">
+                <article class="timeline-card">
+                  <span class="timeline-card__step">1 / 5</span>
+                  <span class="timeline-card__tag">The beginning</span>
+                  <h3 class="timeline-card__title">We matched on Muzz</h3>
+                  <p class="timeline-card__text">Somewhere between profiles and preferences, your name showed up on my screen. I swiped, we matched, and the quiet kind of magic began.</p>
+                  <figure class="timeline-card__figure">
+                    <img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM.jpeg" alt="Early days on Muzz" loading="lazy" />
+                  </figure>
+                </article>
+              </li>
+              <li class="carousel__slide">
+                <article class="timeline-card">
+                  <span class="timeline-card__step">2 / 5</span>
+                  <span class="timeline-card__tag">Voice &amp; words</span>
+                  <h3 class="timeline-card__title">Three calls, then the chat that would not stop</h3>
+                  <p class="timeline-card__text">Call one, two, three. Then the messages, the teasing, the good mornings, the voice notes that felt like you were already close.</p>
+                  <figure class="timeline-card__figure">
+                    <img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM (4).jpeg" alt="Muzz chat and calls" loading="lazy" />
+                  </figure>
+                </article>
+              </li>
+              <li class="carousel__slide">
+                <article class="timeline-card">
+                  <span class="timeline-card__step">3 / 5</span>
+                  <span class="timeline-card__tag">Same love, new app</span>
+                  <h3 class="timeline-card__title">We moved to WhatsApp</h3>
+                  <p class="timeline-card__text">We carried the same jokes into the green bubbles. Good morning became a ritual, and my phone felt like a doorway to you.</p>
+                  <figure class="timeline-card__figure">
+                    <img src="Assets/WhatsApp Image 2026-03-29 at 9.59.30 AM.jpeg" alt="WhatsApp chapter" loading="lazy" />
+                  </figure>
+                </article>
+              </li>
+              <li class="carousel__slide">
+                <article class="timeline-card">
+                  <span class="timeline-card__step">4 / 5</span>
+                  <span class="timeline-card__tag">Real life</span>
+                  <h3 class="timeline-card__title">First meetup</h3>
+                  <p class="timeline-card__text">Screens turned into streets and your smile in front of me. That day the story stopped being only on a phone.</p>
+                  <figure class="timeline-card__figure">
+                    <img src="Assets/First Meetup/WhatsApp Image 2026-03-29 at 9.59.30 AM (2).jpeg" alt="First meetup" loading="lazy" />
+                  </figure>
+                </article>
+              </li>
+              <li class="carousel__slide">
+                <article class="timeline-card timeline-card--finale">
+                  <span class="timeline-card__step">5 / 5</span>
+                  <span class="timeline-card__tag">The rest</span>
+                  <h3 class="timeline-card__title">Till forever</h3>
+                  <p class="timeline-card__text">Everything after is us choosing each other again and again. The timeline keeps going, and I want every new chapter with you.</p>
+                  <p class="timeline-card__finale">Meu Amor, Meri Jaaan, always</p>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous chapter">‹</button>
+          <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next chapter">›</button>
+          <div class="carousel__dots" role="tablist" aria-label="Timeline chapters"></div>
         </div>
       </div>
     </section>
 
-    <section class="section gallery-block section--alt" id="birthday">
-      <div class="section__inner">
-        <h2 class="section__title">Birthday</h2>
-        <p class="section__caption">Celebrating you — the light of every room you walk into.</p>
-        <div class="gallery gallery--wide">
-          <figure class="gallery__item"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.57 AM (1).jpeg" alt="Birthday memory" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.57 AM.jpeg" alt="Birthday memory" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.58 AM (1).jpeg" alt="Birthday memory" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.58 AM (2).jpeg" alt="Birthday memory" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.58 AM.jpeg" alt="Birthday memory" loading="lazy" /></figure>
+    <section class="section memories-section" id="memories">
+      <div class="section__inner section__inner--carousel">
+        <h2 class="section__title">Memories</h2>
+        <p class="section__caption">Pick a chapter. Photos stay inside the carousel so the page stays calm.</p>
+
+        <div class="memory-tabs" role="tablist" aria-label="Memory albums">
+          <button type="button" class="memory-tab is-active" role="tab" aria-selected="true" aria-controls="memory-muzz" id="tab-muzz">Muzz</button>
+          <button type="button" class="memory-tab" role="tab" aria-selected="false" aria-controls="memory-meetup" id="tab-meetup">First meetup</button>
+          <button type="button" class="memory-tab" role="tab" aria-selected="false" aria-controls="memory-birthday" id="tab-birthday">Birthday</button>
+          <button type="button" class="memory-tab" role="tab" aria-selected="false" aria-controls="memory-moments" id="tab-moments">Moments</button>
+        </div>
+
+        <div class="memory-panels">
+          <div class="memory-panel is-active" id="memory-muzz" role="tabpanel" aria-labelledby="tab-muzz">
+            <p class="memory-panel__hint">Screens from the app where it started.</p>
+            <div class="carousel carousel--photos" data-carousel data-carousel-loop>
+              <div class="carousel__viewport">
+                <ul class="carousel__track">
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM.jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM (1).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM (2).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM (3).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM (4).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM (5).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM (6).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.50 AM (7).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM.jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (1).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (2).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (3).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (4).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (5).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (6).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (7).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (8).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (9).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (10).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (11).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.51 AM (12).jpeg" alt="Muzz memory" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Muzz - How we get started/WhatsApp Image 2026-03-29 at 10.42.52 AM.jpeg" alt="Muzz memory" loading="lazy" /></li>
+                </ul>
+              </div>
+              <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous photo">‹</button>
+              <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next photo">›</button>
+              <div class="carousel__dots" role="tablist" aria-label="Photos"></div>
+            </div>
+          </div>
+
+          <div class="memory-panel" id="memory-meetup" role="tabpanel" aria-labelledby="tab-meetup" hidden>
+            <p class="memory-panel__hint">Our first meetup: the day the screen became real.</p>
+            <div class="carousel carousel--photos" data-carousel data-carousel-loop>
+              <div class="carousel__viewport">
+                <ul class="carousel__track">
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/First Meetup/WhatsApp Image 2026-03-29 at 9.59.30 AM (2).jpeg" alt="First meetup" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/First Meetup/WhatsApp Image 2026-03-29 at 9.59.30 AM (3).jpeg" alt="First meetup" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/First Meetup/WhatsApp Image 2026-03-29 at 9.59.30 AM (4).jpeg" alt="First meetup" loading="lazy" /></li>
+                </ul>
+              </div>
+              <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous photo">‹</button>
+              <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next photo">›</button>
+              <div class="carousel__dots" role="tablist" aria-label="Photos"></div>
+            </div>
+          </div>
+
+          <div class="memory-panel" id="memory-birthday" role="tabpanel" aria-labelledby="tab-birthday" hidden>
+            <p class="memory-panel__hint">Celebrating you.</p>
+            <div class="carousel carousel--photos" data-carousel data-carousel-loop>
+              <div class="carousel__viewport">
+                <ul class="carousel__track">
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.57 AM (1).jpeg" alt="Birthday" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.57 AM.jpeg" alt="Birthday" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.58 AM (1).jpeg" alt="Birthday" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.58 AM (2).jpeg" alt="Birthday" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/Birthday/WhatsApp Image 2026-03-29 at 10.00.58 AM.jpeg" alt="Birthday" loading="lazy" /></li>
+                </ul>
+              </div>
+              <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous photo">‹</button>
+              <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next photo">›</button>
+              <div class="carousel__dots" role="tablist" aria-label="Photos"></div>
+            </div>
+          </div>
+
+          <div class="memory-panel" id="memory-moments" role="tabpanel" aria-labelledby="tab-moments" hidden>
+            <p class="memory-panel__hint">Random favourites of us.</p>
+            <div class="carousel carousel--photos" data-carousel data-carousel-loop>
+              <div class="carousel__viewport">
+                <ul class="carousel__track">
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.30 AM.jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.30 AM (1).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.30 AM (5).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 10.00.58 AM (3).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM.jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (1).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (2).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (3).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (4).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (5).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (6).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (7).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (8).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (9).jpeg" alt="Us together" loading="lazy" /></li>
+                  <li class="carousel__slide carousel__slide--photo"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (10).jpeg" alt="Us together" loading="lazy" /></li>
+                </ul>
+              </div>
+              <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous photo">‹</button>
+              <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next photo">›</button>
+              <div class="carousel__dots" role="tablist" aria-label="Photos"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section gallery-block" id="moments">
-      <div class="section__inner">
-        <h2 class="section__title">Moments with you</h2>
-        <p class="section__caption">Snippets of us — because every frame with you is a favourite.</p>
-        <div class="gallery gallery--mosaic">
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.30 AM.jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.30 AM (1).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.30 AM (5).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 10.00.58 AM (3).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM.jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (1).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (2).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (3).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (4).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (5).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (6).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (7).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (8).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (9).jpeg" alt="Us together" loading="lazy" /></figure>
-          <figure class="gallery__item"><img src="Assets/WhatsApp Image 2026-03-29 at 9.59.31 AM (10).jpeg" alt="Us together" loading="lazy" /></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section letter" id="letter">
+    <section class="section letter section--alt" id="letter">
       <div class="section__inner letter__inner">
+        <h2 class="section__title">Letter</h2>
         <blockquote class="letter__quote">
           <p>
-            Rabia — you are my calm, my chaos, my <em>home</em>.
+            Rabia, you are my calm, my chaos, my <em>home</em>.
             I want every sunrise and every silly argument and every quiet evening with you.
-            This site is a small promise: I will keep choosing you, in every language I know — including the one where I only say your name.
+            This site is a small promise: I will keep choosing you, in every language I know, including the one where I only say your name.
           </p>
-          <footer>— Arqam</footer>
+          <div class="letter__pillars" aria-label="What we keep between us">
+            <p class="letter__pillars-line">Between us, for always, we both hold on to the same four things.</p>
+            <ul class="letter__pillar-grid">
+              <li class="letter__pillar">
+                <span class="letter__pillar-emoji" aria-hidden="true">💞</span>
+                <span class="letter__pillar-word">Loyal</span>
+                <span class="letter__pillar-text">to each other, in the small days and the big ones</span>
+              </li>
+              <li class="letter__pillar">
+                <span class="letter__pillar-emoji" aria-hidden="true">🙏</span>
+                <span class="letter__pillar-word">Respect</span>
+                <span class="letter__pillar-text">in how we speak, listen, and disagree</span>
+              </li>
+              <li class="letter__pillar">
+                <span class="letter__pillar-emoji" aria-hidden="true">🤝</span>
+                <span class="letter__pillar-word">Ownership</span>
+                <span class="letter__pillar-text">we take care of this love like it truly belongs to us</span>
+              </li>
+              <li class="letter__pillar">
+                <span class="letter__pillar-emoji" aria-hidden="true">🌹</span>
+                <span class="letter__pillar-word">Romance</span>
+                <span class="letter__pillar-text">that does not fade into routine</span>
+              </li>
+            </ul>
+          </div>
+          <footer>Arqam</footer>
         </blockquote>
-      </div>
-    </section>
-
-    <section class="section proposal" id="proposal">
-      <div class="section__inner proposal__inner">
-        <h2 class="proposal__title">One question</h2>
-        <p class="proposal__text">When you are ready… I need to ask you something important.</p>
-        <button type="button" class="btn btn--primary" id="openProposal">Open the question</button>
       </div>
     </section>
   </main>
@@ -118,27 +286,11 @@
     <a class="footer__top" href="#top">Back to top ↑</a>
   </footer>
 
-  <!-- Proposal modal -->
-  <div class="modal" id="proposalModal" hidden aria-modal="true" role="dialog" aria-labelledby="proposalModalTitle">
-    <div class="modal__backdrop" id="proposalBackdrop"></div>
-    <div class="modal__panel">
-      <button type="button" class="modal__close" id="closeProposal" aria-label="Close">&times;</button>
-      <h2 id="proposalModalTitle" class="modal__title">Rabia…</h2>
-      <p class="modal__question">Will you marry me?</p>
-      <div class="proposal-buttons" id="proposalButtons">
-        <button type="button" class="btn btn--yes" id="btnYes">Yes! 💍</button>
-        <button type="button" class="btn btn--no" id="btnNo">No</button>
-      </div>
-      <p class="modal__hint" id="noHint" hidden>Nice try — that button has other plans 😊</p>
-    </div>
-  </div>
-
-  <!-- Celebration overlay -->
   <div class="celebration" id="celebration" hidden aria-live="polite">
     <div class="celebration__content">
       <p class="celebration__heart" aria-hidden="true">💕</p>
       <h3 class="celebration__title">You just made me the happiest person.</h3>
-      <p class="celebration__sub">I love you, Meri Jaaan. Forever and always — Arqam</p>
+      <p class="celebration__sub">I love you, Meri Jaaan. Forever and always, Arqam</p>
       <button type="button" class="btn btn--ghost" id="closeCelebration">Close</button>
     </div>
   </div>
