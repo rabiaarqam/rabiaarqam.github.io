@@ -709,11 +709,14 @@ main {
   position: relative;
   margin-top: 1rem;
   padding: 0 2.75rem 2.5rem;
+  touch-action: manipulation;
 }
 
 .carousel__viewport {
   overflow: hidden;
   border-radius: 16px;
+  touch-action: manipulation;
+  overscroll-behavior-x: contain;
 }
 
 .carousel__track {
@@ -746,6 +749,8 @@ main {
   object-fit: contain;
   object-position: center;
   display: block;
+  touch-action: manipulation;
+  -webkit-user-drag: none;
 }
 
 .carousel--timeline .carousel__viewport {
@@ -770,6 +775,9 @@ main {
   align-items: center;
   justify-content: center;
   transition: background 0.2s, border-color 0.2s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .carousel__arrow:hover {
@@ -802,6 +810,8 @@ main {
   background: rgba(245, 230, 232, 0.25);
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .carousel__dot.is-active {

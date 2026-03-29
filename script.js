@@ -47,6 +47,39 @@
     if (prev) prev.addEventListener("click", () => goTo(loop ? index - 1 : index - 1));
     if (next) next.addEventListener("click", () => goTo(loop ? index + 1 : index + 1));
 
+    const viewport = root.querySelector(".carousel__viewport");
+    if (viewport) {
+      let swipe = null;
+      const SWIPE_MIN_PX = 48;
+      const HORIZONTAL_DOMINANCE = 1.2;
+
+      viewport.addEventListener("pointerdown", (e) => {
+        if (e.pointerType !== "touch" && e.pointerType !== "pen") return;
+        swipe = { x: e.clientX, y: e.clientY, id: e.pointerId };
+        try {
+          viewport.setPointerCapture(e.pointerId);
+        } catch (_) {}
+      });
+
+      viewport.addEventListener("pointerup", (e) => {
+        if (!swipe || e.pointerId !== swipe.id) return;
+        const dx = e.clientX - swipe.x;
+        const dy = e.clientY - swipe.y;
+        swipe = null;
+        if (Math.abs(dx) < SWIPE_MIN_PX) return;
+        if (Math.abs(dx) < Math.abs(dy) * HORIZONTAL_DOMINANCE) return;
+        if (dx < 0) {
+          goTo(index + 1);
+        } else {
+          goTo(index - 1);
+        }
+      });
+
+      viewport.addEventListener("pointercancel", () => {
+        swipe = null;
+      });
+    }
+
     root.dataset.inited = "1";
     update();
   }
